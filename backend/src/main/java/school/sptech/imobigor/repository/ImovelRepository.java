@@ -44,12 +44,14 @@ public class ImovelRepository {
                 tipo,
                 endereco,
                 cidade,
+                uf,
                 preco,
                 quartos,
                 banheiros,
                 area,
-                descricao
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                descricao,
+                imagem
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """;
 
         KeyHolder keyHolder = new GeneratedKeyHolder();
@@ -60,11 +62,13 @@ public class ImovelRepository {
             statement.setString(2, imovel.getTipo());
             statement.setString(3, imovel.getEndereco());
             statement.setString(4, imovel.getCidade());
-            statement.setDouble(5, imovel.getPreco());
-            statement.setDouble(6, imovel.getQuartos());
-            statement.setDouble(7, imovel.getBanheiros());
-            statement.setDouble(8, imovel.getArea());
-            statement.setString(9, imovel.getDescricao());
+            statement.setString(5, imovel.getUf());
+            statement.setDouble(6, imovel.getPreco());
+            statement.setDouble(7, imovel.getQuartos());
+            statement.setDouble(8, imovel.getBanheiros());
+            statement.setDouble(9, imovel.getArea());
+            statement.setString(10, imovel.getDescricao());
+            statement.setString(11, imovel.getImagem().toLowerCase());
             return statement;
         }, keyHolder);
 

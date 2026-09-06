@@ -6,11 +6,13 @@ public class Imovel {
     private String tipo;
     private String endereco;
     private String cidade;
+    private String uf;
     private Double preco;
     private Integer quartos;
     private Integer banheiros;
     private Double area;
     private String descricao;
+    private String imagem;
 
     public Integer getId() {
         return id;
@@ -52,6 +54,10 @@ public class Imovel {
         this.cidade = cidade;
     }
 
+    public String getUf() { return uf; }
+
+    public void setUf(String estado) { this.uf = estado; }
+
     public Double getPreco() {
         return preco;
     }
@@ -91,4 +97,8 @@ public class Imovel {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    public String getImagem() { return imagem; }
+
+    public void setImagem(String imagem) { this.imagem = imagem; }
 }

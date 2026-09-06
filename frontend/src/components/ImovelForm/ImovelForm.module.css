@@ -1,0 +1,82 @@
+.container{
+    padding: 20px;
+    display: grid;
+    gap: 30px;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0px 50px;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #424242;
+    padding: 30px;
+    & .campo {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 10px;
+        & input {
+            height: 30px;
+            border-radius: 5px;
+            border: solid 1px #9e9e9e;
+            padding: 10px;
+        }
+        & select {
+            height: 50px;
+            border-radius: 5px;
+            border: solid 1px #9e9e9e;
+            padding: 10px;
+        }
+        & textArea {
+            height: 50px;
+            border-radius: 5px;
+            border: solid 1px #9e9e9e;
+            padding: 10px;
+        }
+    }
+}
+
+.botoes {
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & button {
+        padding: 15px;
+        background-color: #141447;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+        align-items: center;
+        color: aliceblue;
+        border: none;
+        border-radius: 5px;
+    }
+
+    & .link {
+        padding: 17px;
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        color: #141447;
+        border: 1px #424242 solid;
+        border-radius: 5px;
+    }
+}
+
+.botao {
+    padding: 11px;
+    background-color: #141447;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13.3px;
+}

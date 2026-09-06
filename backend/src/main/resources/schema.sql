@@ -4,21 +4,23 @@ CREATE TABLE IF NOT EXISTS imoveis (
     tipo VARCHAR(100) NOT NULL,
     endereco VARCHAR(100) NOT NULL,
     cidade VARCHAR(100) NOT NULL,
+    uf CHAR(2) NOT NULL,
     preco DECIMAL(10,2) NOT NULL,
     quartos INT,
     banheiros INT,
     area DECIMAL(10,2) NOT NULL,
-    descricao VARCHAR(500) NOT NULL
+    descricao VARCHAR(500) NOT NULL,
+    imagem VARCHAR(100)
 );
 
-INSERT INTO imoveis (titulo, tipo, endereco, cidade, preco, quartos, banheiros, area, descricao) VALUES
-    ('Apartamento moderno no centro', 'Apartamento', 'Rua Augusta, 1250', 'São Paulo', 450000.00, 2, 2, 68.50, 'Apartamento moderno e bem localizado, próximo a restaurantes, comércio e transporte público.'),
-    ('Casa espaçosa com piscina', 'Casa', 'Rua das Palmeiras, 320', 'São Paulo', 780000.00, 4, 3, 185.00, 'Casa ampla com piscina, área gourmet e garagem para dois carros.'),
-    ('Apartamento compacto', 'Apartamento', 'Rua Vergueiro, 850', 'São Paulo', 320000.00, 1, 1, 42.00, 'Apartamento compacto ideal para uma pessoa ou casal, com fácil acesso ao metrô.'),
-    ('Casa familiar em bairro tranquilo', 'Casa', 'Rua das Acácias, 175', 'Campinas', 590000.00, 3, 2, 150.00, 'Casa confortável localizada em bairro residencial tranquilo, próxima a escolas e supermercados.'),
-    ('Cobertura com vista panorâmica', 'Cobertura', 'Avenida Paulista, 2100', 'São Paulo', 1250000.00, 3, 4, 210.00, 'Cobertura sofisticada com ampla área externa e vista privilegiada da cidade.'),
-    ('Casa térrea com amplo quintal', 'Casa', 'Rua dos Ipês, 450', 'Santo André', 650000.00, 3, 2, 175.00, 'Casa térrea com quintal espaçoso, churrasqueira e duas vagas de garagem.'),
-    ('Apartamento próximo ao metrô', 'Apartamento', 'Rua Heitor Penteado, 600', 'São Paulo', 510000.00, 2, 2, 72.00, 'Apartamento localizado a poucos minutos do metrô, com condomínio completo.'),
-    ('Studio moderno', 'Studio', 'Rua Oscar Freire, 890', 'São Paulo', 295000.00, 1, 1, 35.00, 'Studio moderno em região valorizada, ideal para quem busca praticidade e localização.'),
-    ('Sobrado com garagem', 'Sobrado', 'Rua das Flores, 215', 'Guarulhos', 480000.00, 3, 2, 120.00, 'Sobrado bem conservado com três quartos, garagem e espaço para toda a família.'),
-    ('Casa de alto padrão', 'Casa', 'Alameda dos Jardins, 100', 'Barueri', 1850000.00, 5, 5, 320.00, 'Imóvel de alto padrão com piscina, área gourmet, jardim e garagem para quatro veículos.');
+INSERT INTO imoveis (titulo, tipo, endereco, cidade, uf, preco, quartos, banheiros, area, descricao, imagem) VALUES
+    ('Apartamento moderno no centro', 'Apartamento', 'Rua Augusta, 1250', 'São Paulo', 'SP', 450000.00, 2, 2, 68.50, 'Apartamento moderno e bem localizado, próximo a restaurantes, comércio e transporte público.', 'apartamento.jpg'),
+    ('Casa espaçosa com piscina', 'Casa', 'Rua das Palmeiras, 320', 'São Paulo', 'SP', 780000.00, 4, 3, 185.00, 'Casa ampla com piscina, área gourmet e garagem para dois carros.', 'casa.jpg'),
+    ('Apartamento compacto', 'Apartamento', 'Rua Vergueiro, 850', 'São Paulo', 'SP', 320000.00, 1, 1, 42.00, 'Apartamento compacto ideal para uma pessoa ou casal, com fácil acesso ao metrô.', 'apartamento.jpg'),
+    ('Casa familiar em bairro tranquilo', 'Casa', 'Rua das Acácias, 175', 'Campinas', 'SP', 590000.00, 3, 2, 150.00, 'Casa confortável localizada em bairro residencial tranquilo, próxima a escolas e supermercados.', 'casa.jpg'),
+    ('Cobertura com vista panorâmica', 'Cobertura', 'Avenida Paulista, 2100', 'São Paulo', 'SP', 1250000.00, 3, 4, 210.00, 'Cobertura sofisticada com ampla área externa e vista privilegiada da cidade.', 'cobertura.jpg'),
+    ('Casa térrea com amplo quintal', 'Casa', 'Rua dos Ipês, 450', 'Santo André', 'SP', 650000.00, 3, 2, 175.00, 'Casa térrea com quintal espaçoso, churrasqueira e duas vagas de garagem.', 'casa.jpg'),
+    ('Apartamento próximo ao metrô', 'Apartamento', 'Rua Heitor Penteado, 600', 'São Paulo', 'SP', 510000.00, 2, 2, 72.00, 'Apartamento localizado a poucos minutos do metrô, com condomínio completo.', 'apartamento.jpg'),
+    ('Studio moderno', 'Studio', 'Rua Oscar Freire, 890', 'São Paulo', 'SP', 295000.00, 1, 1, 35.00, 'Studio moderno em região valorizada, ideal para quem busca praticidade e localização.', 'apartamento.jpg'),
+    ('Sobrado com garagem', 'Sobrado', 'Rua das Flores, 215', 'Guarulhos', 'SP', 480000.00, 3, 2, 120.00, 'Sobrado bem conservado com três quartos, garagem e espaço para toda a família.', 'casa.jpg'),
+    ('Casa de alto padrão', 'Casa', 'Alameda dos Jardins, 100', 'Barueri', 'SP', 1850000.00, 5, 5, 320.00, 'Imóvel de alto padrão com piscina, área gourmet, jardim e garagem para quatro veículos.', 'casa.jpg');

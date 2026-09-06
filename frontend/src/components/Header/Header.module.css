@@ -1,0 +1,18 @@
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: #141447;
+}
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+.link {
+    text-decoration: none;
+    color: white;
+}

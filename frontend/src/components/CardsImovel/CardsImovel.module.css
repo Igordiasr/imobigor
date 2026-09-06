@@ -1,0 +1,30 @@
+.painel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 50px;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 1fr 0fr 0fr 0fr;
+    text-align: left;
+    padding: 10px;
+    border: solid 1px #141447;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #424242;
+    & h4{
+        color: #24247c;
+    }
+    & .descricao{
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr;
+        & .destaque {
+            grid-column: 1/ -1;
+        }
+        & p{
+            font-size: 12px;
+        }
+    }
+}
