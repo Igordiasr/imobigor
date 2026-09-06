@@ -1,0 +1,112 @@
+.container {
+    padding: 15px 30px;
+    display: grid;
+    grid-template-rows: 0fr 1fr;
+}
+
+.link {
+    width: 25%;
+    padding: 10px;
+    text-decoration: none;
+    color: aliceblue;
+    background-color: #141447;
+    border-radius: 5px
+}
+
+.imovel {
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.info {
+    display: grid;
+    grid-template-rows: .5fr .5fr 1fr 1fr;
+    color: #141447;
+    padding: 0px 20px;
+
+    & .titulo {
+        text-align: left;
+        & h3 {
+            margin: 0;
+        }
+        & h2 {
+            color: #3124e2;
+        }
+    }
+
+    & .icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: center;
+        & h5 {
+            margin: 0;
+        }
+        & .square {
+            border: solid 1px #1414474f;
+            & .squareIcons {
+                display: flex;
+                justify-content: center;
+                gap: 5px;
+            }
+        }
+
+    }
+
+    & .descricao {
+        text-align: left;
+
+        & h5 {
+            margin: 0;
+        }
+    }
+    
+    & .endereco {
+        text-align: left;
+    
+        & h5 {
+            margin: 0;
+        }
+    }
+}
+
+.botao {
+    display: flex;
+    justify-content: end;
+    padding: 0 50px;
+
+    & button {
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(252, 36, 36);
+        padding: 15px 35px;
+        color: aliceblue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+}
+
+.confirmacao {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    & .confirmar {
+        border: none;
+        border-radius: 5px;
+        background-color: green;
+        padding: 15px 35px;
+        color: aliceblue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+    & .cancelar {
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(252, 36, 36);
+        padding: 15px 35px;
+        color: aliceblue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+}
+

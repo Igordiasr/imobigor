@@ -2,7 +2,6 @@ package school.sptech.imobigor.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.jdbc.core.JdbcTemplate;
 import school.sptech.imobigor.model.Imovel;
 import school.sptech.imobigor.service.ImovelService;
 
