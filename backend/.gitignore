@@ -31,5 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
-/data/imobiliaria.trace.db
 /data/imobiliaria.mv.db
+/data/imobiliaria.trace.db
