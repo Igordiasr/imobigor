@@ -6,6 +6,7 @@ import school.sptech.imobigor.model.Imovel;
 import school.sptech.imobigor.service.ImovelService;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/imoveis")
@@ -35,12 +36,12 @@ public class ImobiliariaController {
     }
 
     @PostMapping
-    public ResponseEntity<Imovel> cadastrarImovel(@RequestBody Imovel imovel) {
+    public ResponseEntity<Object> cadastrarImovel(@RequestBody Imovel imovel) {
         try {
             Imovel novoImovel = imovelService.cadastrarImovel(imovel);
             return ResponseEntity.status(201).body(novoImovel);
         } catch (IllegalArgumentException e) {
-            return ResponseEntity.status(400).build();
+            return ResponseEntity.status(400).body(Map.of("mensagem", e.getMessage()));
         }
     }
 

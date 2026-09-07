@@ -28,3 +28,9 @@
         }
     }
 }
+
+.semImovel {
+            grid-column: 1/ -1;
+            grid-row: 2;
+            color: #141447c0;
+}
