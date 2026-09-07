@@ -10,7 +10,10 @@ export function CardsImovel(props) {
     }
     return (
         <div className={cards.painel} >
-            {props.imoveis.map(imovel =>
+            {props.imoveis.length === 0 ? (
+                <h1 className={cards.semImovel}>Não há imóveis cadastrados</h1>
+            ) :
+            (props.imoveis.map(imovel =>
                 <div key={imovel.id}>
                     <Link className={cards.card} id={imovel.id} to={`/${imovel.id}`}>
                         <img src={getImageUrl(imovel.imagem)} alt={imovel.tipo} width={300} height={235} />
@@ -36,7 +39,7 @@ export function CardsImovel(props) {
                         <h4>{(imovel.preco).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h4>
                     </Link>
                 </div>
-            )}
+            ))}
         </div>
     )
 }

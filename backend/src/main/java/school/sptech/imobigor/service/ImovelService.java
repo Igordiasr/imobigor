@@ -41,24 +41,28 @@ public class ImovelService {
             throw new IllegalArgumentException("A cidade da localização do imóvel é obrigatória");
         }
 
-        if (imovel.getPreco() <= 0) {
+        if (imovel.getPreco() == null || imovel.getPreco() <= 0) {
             throw new IllegalArgumentException("O preço do imóvel é obrigatório");
         }
 
-        if (imovel.getQuartos() < 0) {
+        if (imovel.getQuartos() == null || imovel.getQuartos() < 0) {
             throw new IllegalArgumentException("A quantidade de quartos não pode ser negativa");
         }
 
-        if (imovel.getBanheiros() < 0) {
+        if (imovel.getBanheiros() == null || imovel.getBanheiros() < 0) {
             throw new IllegalArgumentException("A quantidade de banheiros não pode ser negativa");
         }
 
-        if (imovel.getArea() <= 0) {
+        if (imovel.getArea() == null || imovel.getArea() <= 0) {
             throw new IllegalArgumentException("A área do imóvel não pode ser 0 ou negativa");
         }
 
         if (imovel.getDescricao() == null  || imovel.getDescricao().isEmpty()) {
             throw new IllegalArgumentException("A descrição do imóvel é obrigatória");
+        }
+
+        if (imovel.getImagem() == null || imovel.getImagem().isEmpty()) {
+            throw new IllegalArgumentException("A imagem do imóvel é obrigatória");
         }
 
         return imovelRepository.cadastrarImovel(imovel);
